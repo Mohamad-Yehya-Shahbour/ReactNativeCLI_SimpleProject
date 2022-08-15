@@ -28,6 +28,13 @@ function SearchStackScreen() {
             presentation="modal"
         >
 
+            <SearchStack.Screen 
+                name="Universities" 
+                component={SearchScreen}
+            />
+
+            
+
             
             
         </SearchStack.Navigator>  
