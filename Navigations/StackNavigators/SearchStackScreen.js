@@ -33,6 +33,9 @@ function SearchStackScreen() {
                 component={SearchScreen}
             />
 
+            <SearchStack.Screen name="SearchItemDetails" component={SearchDetailsScreen}
+                
+            />
             
 
             
