@@ -12,7 +12,7 @@ function TabNavigator() {
 
       <Tab.Navigator initialRouteName="Search" screenOptions={{ headerShown: false }} >
           
-        {/* <Tab.Screen
+        <Tab.Screen
             options={{
                 tabBarLabel:"Search",
                 tabBarLabelStyle:{color:"black"},
@@ -28,19 +28,7 @@ function TabNavigator() {
             component={SearchStackScreen} 
         />
 
-        <Tab.Screen
-            options={{
-                tabBarLabel:"List",
-                tabBarLabelStyle:{color:"black"},
-                tabBarIcon: ({color, size}) => (
-                    <FontAwesome name='list-ul'
-                    color={"black"} size={size} />
-                ),
-                tabBarActiveBackgroundColor:"#cdcfd1"
-            }} 
-            name="List"
-            component={ListStackScreen} 
-        /> */}
+        
         
       </Tab.Navigator>
 
