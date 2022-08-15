@@ -11,7 +11,7 @@ function ListStackScreen() {
     <ListStack.Navigator initialRouteName="Links" >
 
       <ListStack.Screen name="Links" component={ListScreen} />
-      
+      <ListStack.Screen name="details" component={ListDetailsScreen} />
       
     </ListStack.Navigator>
     
