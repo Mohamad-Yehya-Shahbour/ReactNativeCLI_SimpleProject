@@ -34,7 +34,16 @@ function SearchStackScreen() {
             />
 
             <SearchStack.Screen name="SearchItemDetails" component={SearchDetailsScreen}
-                
+                options= {({route}) => 
+                    ({
+                        title: route.params.title,
+                        headerTitleAlign:"center",
+                        gestureDirection:"vertical-inverted",
+                        transitionSpec:{
+                            open: config,
+                            close: config,},
+                    })
+                }  
             />
             
 
