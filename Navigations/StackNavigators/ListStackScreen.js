@@ -10,6 +10,7 @@ function ListStackScreen() {
   return (
     <ListStack.Navigator initialRouteName="Links" >
 
+      <ListStack.Screen name="Links" component={ListScreen} />
       
       
     </ListStack.Navigator>
