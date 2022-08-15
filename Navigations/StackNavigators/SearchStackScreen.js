@@ -18,7 +18,14 @@ const config = {
 function SearchStackScreen() {
     return (
         <SearchStack.Navigator 
-            
+            initialRouteName="SearchItems"
+            screenOptions={{
+                gestureEnabled: true,
+                cardOverlayEnabled: true,
+                ...TransitionPresets.ModalPresentationIOS,
+                ...TransitionPresets.FadeFromBottomAndroid ,
+            }}
+            presentation="modal"
         >
 
             
