@@ -121,6 +121,8 @@ const filter = (value) => {
               <Text style={styles.info2}>you are looking for...</Text>
             </View> 
         }
+            { error && <Text style={{justifyContent:"center", alignSelf:"center", fontSize:"25",color:"black"}}>Page is not reachable, Please try again</Text>}
+
       </SafeAreaView>
   );
 }
