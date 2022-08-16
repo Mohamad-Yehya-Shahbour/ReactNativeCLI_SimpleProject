@@ -38,10 +38,15 @@ function ListScreen({navigation}) {
             catArr.push(tempObj);
           }
         });
+
         console.log('array', catArr);
         setCategArray(catArr);
         setLoading(false);
       })
+      .catch(error => {
+        console.warn('errorrrr', error);
+        setError(true)
+      });
   }, []);
   return (
       <SafeAreaView style={styles.container}>
