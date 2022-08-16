@@ -18,6 +18,23 @@ function SearchScreen({ navigation }) {
       }
     }
     
+    const api = () =>{
+      var requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+      setLoading(true);
+      fetch(`http://universities.hipolabs.com/search?country=${searchQuery}`, requestOptions)
+        .then((response) => response.json())
+        .then((responseJson) => {
+            setData(responseJson);
+            setLoading(false);
+          })
+        .catch(error => {
+          console.warn('error', error);
+          setError(true);
+        });
+    }
 
     
 
