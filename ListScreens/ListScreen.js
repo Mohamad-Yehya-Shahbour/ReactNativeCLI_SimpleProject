@@ -108,6 +108,19 @@ const filter = (value) => {
                 )}
             />
 
+        {filteredData? 
+          (<FlatList
+            data={filteredData}
+            keyExtractor={(item, index) => index}
+            ItemSeparatorComponent={ItemSeparatorView}
+            renderItem={ItemView}
+          />
+          ) : 
+            <View>
+              <Text style={styles.info2}>Pleasr select the category of the links  </Text>
+              <Text style={styles.info2}>you are looking for...</Text>
+            </View> 
+        }
       </SafeAreaView>
   );
 }
