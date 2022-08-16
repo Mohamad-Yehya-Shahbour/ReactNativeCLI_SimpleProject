@@ -17,7 +17,7 @@ function SearchScreen({ navigation }) {
         setData(null);
       }
     }
-    
+
     const api = () =>{
       var requestOptions = {
           method: 'GET',
@@ -48,7 +48,7 @@ function SearchScreen({ navigation }) {
         </View>
         );
       };
-    
+
       const ItemSeparatorView = () => {
         return (
           // Flat List Item Separator
@@ -89,7 +89,7 @@ function SearchScreen({ navigation }) {
             size="large"
             color={"black"}
           />}
-          
+
           { error && <Text style={{justifyContent:"center", alignSelf:"center", fontSize:"25",color:"black"}}>Page is not reachable, Please try again</Text>}
           
           
@@ -99,6 +99,39 @@ function SearchScreen({ navigation }) {
     );
 }
 
-
+const styles = StyleSheet.create({
+    button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 12,
+        borderRadius: 4,
+        backgroundColor: '#1e36e8',
+        width:"90%",
+        marginVertical:15,
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+      },
+      text: {
+        fontSize: 16,
+        lineHeight: 21,
+        fontWeight: 'bold',
+        letterSpacing: 0.25,
+        color: 'white',
+      },
+      info: {
+        fontSize: 12,
+        color: 'black',
+        justifyContent:"center",
+        alignSelf:"center"
+      },
+});
 
 export default SearchScreen;
