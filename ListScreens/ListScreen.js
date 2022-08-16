@@ -56,6 +56,17 @@ const filter = (value) => {
     setFilteredData(filteredArray);
     }
 };
+  const ItemView = ({item, index}) => {
+    return (
+      // Flat List Item
+      <TouchableOpacity onPress={() => Linking.openURL(item.Link)}>
+        <View style={styles.itemview}>
+          <Text style={styles.text} > {index+1}{". "}{item.Description} </Text>
+        </View>
+      </TouchableOpacity>
+      
+    );
+  };
   return (
       <SafeAreaView style={styles.container}>
             <Text style={[styles.label]}></Text>
