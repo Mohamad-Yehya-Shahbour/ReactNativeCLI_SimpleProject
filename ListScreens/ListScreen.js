@@ -123,6 +123,13 @@ const filter = (value) => {
         }
             { error && <Text style={{justifyContent:"center", alignSelf:"center", fontSize:"25",color:"black"}}>Page is not reachable, Please try again</Text>}
 
+            {loading && 
+              <ActivityIndicator
+                style={{position: 'absolute',left: 0,right: 0,bottom: 0,top: 0,}}
+                size="large"
+                color={"black"}
+              />
+            }
       </SafeAreaView>
   );
 }
