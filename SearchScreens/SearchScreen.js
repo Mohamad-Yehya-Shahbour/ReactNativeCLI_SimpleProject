@@ -90,6 +90,8 @@ function SearchScreen({ navigation }) {
             color={"black"}
           />}
           
+          { error && <Text style={{justifyContent:"center", alignSelf:"center", fontSize:"25",color:"black"}}>Page is not reachable, Please try again</Text>}
+          
           
 
       </SafeAreaView>
