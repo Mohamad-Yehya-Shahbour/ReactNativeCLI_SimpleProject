@@ -48,6 +48,14 @@ function ListScreen({navigation}) {
         setError(true)
       });
   }, []);
+const filter = (value) => {
+    for(let i=0; i<data.entries.length; i++){
+        if(data.entries[i].Category == value){
+            filteredArray.push(data.entries[i]);
+    }
+    setFilteredData(filteredArray);
+    }
+};
   return (
       <SafeAreaView style={styles.container}>
             <Text style={[styles.label]}></Text>
