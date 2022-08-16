@@ -48,6 +48,7 @@ function ListScreen({navigation}) {
         setError(true)
       });
   }, []);
+
 const filter = (value) => {
     for(let i=0; i<data.entries.length; i++){
         if(data.entries[i].Category == value){
@@ -56,6 +57,7 @@ const filter = (value) => {
     setFilteredData(filteredArray);
     }
 };
+
   const ItemView = ({item, index}) => {
     return (
       // Flat List Item
@@ -67,12 +69,15 @@ const filter = (value) => {
       
     );
   };
+
   const ItemSeparatorView = () => {
     return (
       // Flat List Item Separator
       <View style={{height: 1, width: '80%', backgroundColor: '#C8C8C8', justifyContent:"center", alignSelf:"center"}} />
     );
   };
+
+  
 
   return (
       <SafeAreaView style={styles.container}>
@@ -121,6 +126,7 @@ const filter = (value) => {
               <Text style={styles.info2}>you are looking for...</Text>
             </View> 
         }
+            
             { error && <Text style={{justifyContent:"center", alignSelf:"center", fontSize:"25",color:"black"}}>Page is not reachable, Please try again</Text>}
 
             {loading && 
@@ -130,8 +136,98 @@ const filter = (value) => {
                 color={"black"}
               />
             }
+            
       </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 15, 
+    paddingBottom:0,
+    flex:1
+  },
+  dropdown: {
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 0.5,
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    backgroundColor:"white",
+    color:"black"
+  },
+  icon: {
+    marginRight: 5,
+  },
+  label: {
+    position: 'absolute',
+    left: 22,
+    top: 8,
+    zIndex: 999,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: 'black',
+  },
+  placeholderStyle: {
+    fontSize: 16,
+    color: 'black',
+  },
+  selectedTextStyle: {
+    fontSize: 16,
+    color: 'black',
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
+  },
+  inputSearchStyle: {
+    height: 40,
+    fontSize: 16,
+  },
+  text: {
+    fontSize: 15,
+    color: 'black',
+    marginBottom:4
+  },
+  link: {
+    fontSize: 15,
+    color: 'blue',
+    marginBottom:4
+  },
+  info: {
+    fontSize: 18,
+    color: 'black',
+    marginBottom:4, 
+    justifyContent:"center",
+    alignSelf:"center",
+    marginTop:10
+  },
+  itemview: {
+    padding: 16,
+    marginTop: 15,
+    marginBottom: 15,
+
+    width: "90%",
+    backgroundColor: "#fff",
+    borderRadius: 20,
+    alignSelf: "center",
+    paddingHorizontal: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  info2: {
+    fontSize: 13,
+    color: 'black',
+    justifyContent:"center",
+    alignSelf:"center",
+    marginTop:5
+  },
+});
 
 export default ListScreen;
