@@ -14,6 +14,32 @@ function ListScreen({navigation}) {
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
 
+  useEffect(() => {
+    let array = [];
+    let catArr = [];
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow',
+    };
+
+    fetch('https://api.publicapis.org/entries', requestOptions)
+      .then(response => response.json())
+      .then(responseJson => {
+        setData(responseJson);
+        responseJson.entries.map(entries => {
+          if (array.includes(entries.Category)) {
+          } else {
+            array.push(entries.Category);
+            let tempObj = {
+              label: entries.Category,
+              value: entries.Category,
+            };
+
+            catArr.push(tempObj);
+          }
+        });
+      })
+  }, []);
   return (
       <SafeAreaView style={styles.container}>
             <Text style={[styles.label]}></Text>
