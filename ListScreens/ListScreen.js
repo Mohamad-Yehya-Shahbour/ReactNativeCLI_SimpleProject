@@ -38,6 +38,9 @@ function ListScreen({navigation}) {
             catArr.push(tempObj);
           }
         });
+        console.log('array', catArr);
+        setCategArray(catArr);
+        setLoading(false);
       })
   }, []);
   return (
