@@ -11,6 +11,12 @@ function SearchScreen({ navigation }) {
     const [loading, setLoading] = useState(false);
     const [error, setError]= useState(false)
     
+    const onChangeSearch = query => {
+      setSearchQuery(query);
+      if(query == ""){
+        setData(null);
+      }
+    }
     
 
     
