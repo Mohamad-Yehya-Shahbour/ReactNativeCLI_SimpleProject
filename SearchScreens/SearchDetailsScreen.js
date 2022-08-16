@@ -29,5 +29,15 @@ function SearchDetailsScreen({route}) {
     );
 }
 
+const styles = StyleSheet.create({
+  loading: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#234356'
+  },
+});
 
 export default SearchDetailsScreen;
