@@ -36,6 +36,18 @@ function SearchScreen({ navigation }) {
         });
     }
 
+    const ItemView = ( {item} ) => {
+        return (
+          // Flat List Item
+        <View style={{flex:1, alignItems:"center",justifyContent:"center"}} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SearchItemDetails', {
+                url: item.domains[0], title: item.name
+            })}>
+                <Text style={styles.text}>{item.name}</Text>
+            </TouchableOpacity>
+        </View>
+        );
+      };
     
 
     
