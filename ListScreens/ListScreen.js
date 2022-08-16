@@ -67,6 +67,13 @@ const filter = (value) => {
       
     );
   };
+  const ItemSeparatorView = () => {
+    return (
+      // Flat List Item Separator
+      <View style={{height: 1, width: '80%', backgroundColor: '#C8C8C8', justifyContent:"center", alignSelf:"center"}} />
+    );
+  };
+
   return (
       <SafeAreaView style={styles.container}>
             <Text style={[styles.label]}></Text>
